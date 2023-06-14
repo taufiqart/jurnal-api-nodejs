@@ -1,0 +1,85 @@
+### install extensions rest client
+
+GET http://localhost:3000/users/
+
+### signup
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "fullName":"Taufiq Art",
+    "email":"taufiqart@gmail.com",
+    "password":"taufiqart",
+    "role":"siswa"
+}
+### login
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email":"taufiqart@gmail.com",
+    "password":"taufiqart"
+}
+
+
+
+### user
+GET http://localhost:3000/users/6488c791ba821c30879c1582
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0ODhjNzkxYmE4MjFjMzA4NzljMTU4MiIsImZ1bGxOYW1lIjoiVGF1ZmlxIEFydCIsImVtYWlsIjoidGF1ZmlxYXJ0QGdtYWlsLmNvbSIsInJvbGUiOiJwZW1iaW1iaW5nIiwiY3JlYXRlZEF0IjoiMjAyMy0wNi0xM1QxOTo0NjoyNS40NzBaIiwidXBkYXRlZEF0IjoiMjAyMy0wNi0xM1QxOTo0NjoyNS40NzBaIn0sImlhdCI6MTY4NjY5NzM4N30.SfDYo0U2uuPARnXS0tENlrPZzejNVONMGuXsDfjuonc
+
+### absensi
+GET http://localhost:3000/absensi/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0ODhjNzkxYmE4MjFjMzA4NzljMTU4MiIsImZ1bGxOYW1lIjoiVGF1ZmlxIEFydCIsImVtYWlsIjoidGF1ZmlxYXJ0QGdtYWlsLmNvbSIsInJvbGUiOiJwZW1iaW1iaW5nIiwiY3JlYXRlZEF0IjoiMjAyMy0wNi0xM1QxOTo0NjoyNS40NzBaIiwidXBkYXRlZEF0IjoiMjAyMy0wNi0xM1QxOTo0NjoyNS40NzBaIn0sImlhdCI6MTY4NjY5NzM4N30.SfDYo0U2uuPARnXS0tENlrPZzejNVONMGuXsDfjuonc
+
+### absensi
+GET http://localhost:3000/absensi/648890c56cbdd47d12ff5566
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImZ1bGxOYW1lIjoiVGF1ZmlxIEFydCIsImVtYWlsIjoidGF1ZmlxYXJ0QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJFBRbWRuYkpWQjdDc0lPd20zUnAxcmUwVjIuTDM2U3kyb3BHdkVXekVidXpBd1pra0JGMVdlIiwicm9sZSI6InNpc3dhIiwiX2lkIjoiNjQ4OGM3OTFiYTgyMWMzMDg3OWMxNTgyIiwiY3JlYXRlZEF0IjoxNjg2Njg1NTg1NDcwLCJ1cGRhdGVkQXQiOjE2ODY2ODU1ODU0NzAsIl9fdiI6MH0sImlhdCI6MTY4NjY4NTU4NX0.dUZT2_rK3Y-XaxAYzSC6hKdy-2PK6ARddo0UUDEMN60
+
+### simpan absensi
+POST http://localhost:3000/absensi/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImZ1bGxOYW1lIjoiVGF1ZmlxIEFydCIsImVtYWlsIjoidGF1ZmlxYXJ0QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJFBRbWRuYkpWQjdDc0lPd20zUnAxcmUwVjIuTDM2U3kyb3BHdkVXekVidXpBd1pra0JGMVdlIiwicm9sZSI6InNpc3dhIiwiX2lkIjoiNjQ4OGM3OTFiYTgyMWMzMDg3OWMxNTgyIiwiY3JlYXRlZEF0IjoxNjg2Njg1NTg1NDcwLCJ1cGRhdGVkQXQiOjE2ODY2ODU1ODU0NzAsIl9fdiI6MH0sImlhdCI6MTY4NjY4NTU4NX0.dUZT2_rK3Y-XaxAYzSC6hKdy-2PK6ARddo0UUDEMN60
+
+{
+    "absensi":"masuk",
+    "status":"pending",
+    "userId":"648890c56cbdd47d12ff5566"
+}
+
+
+### set status absensi
+POST http://localhost:3000/absensi/6488a66b05325f7ecda727b6/status
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0ODg5MGM1NmNiZGQ0N2QxMmZmNTU2NiIsImZ1bGxOYW1lIjoiVGF1ZmlxIEFydCIsImVtYWlsIjoidGF1ZmlxYXJ0QGdtYWlsLmNvbSIsInJvbGUiOiJzaXN3YSIsImNyZWF0ZWRBdCI6MTY4NjY3MTU1NzkxNSwidXBkYXRlZEF0IjoxNjg2NjcxNTU3OTE1fSwiaWF0IjoxNjg2Njc2MDgzfQ.ma-4J8Dmj2vjWMIgEWlJdR-SDeu30Ln52Y13KV3Yx3k
+
+{
+    "status":"ditolak"
+}
+
+
+
+
+### jurnal
+GET http://localhost:3000/jurnal/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0ODhkZDljYmZhYmQ4Y2MzZmM3OWQ5ZSIsImZ1bGxOYW1lIjoiVGF1ZmlxIEFydCIsImVtYWlsIjoidGF1ZmlxYXJ0QGdtcy5sZCIsInJvbGUiOiJzaXN3YSIsImNyZWF0ZWRBdCI6MTY4NjY5MTIyODYwNywidXBkYXRlZEF0IjoxNjg2NjkxMjI4NjA4fSwiaWF0IjoxNjg2NjkzNjE5fQ.KQlnyHC7wZw__gbosc_4zqkXncX9LcdEca9d9mqkRL4
+
+### jurnal
+GET http://localhost:3000/jurnal/648890c56cbdd47d12ff5566
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0ODg5MGM1NmNiZGQ0N2QxMmZmNTU2NiIsImZ1bGxOYW1lIjoiVGF1ZmlxIEFydCIsImVtYWlsIjoidGF1ZmlxYXJ0QGdtYWlsLmNvbSIsInJvbGUiOiJzaXN3YSIsImNyZWF0ZWRBdCI6MTY4NjY3MTU1NzkxNSwidXBkYXRlZEF0IjoxNjg2NjcxNTU3OTE1fSwiaWF0IjoxNjg2Njc2MDgzfQ.ma-4J8Dmj2vjWMIgEWlJdR-SDeu30Ln52Y13KV3Yx3k
+
+### simpan jurnal
+POST http://localhost:3000/jurnal/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0ODg5MGM1NmNiZGQ0N2QxMmZmNTU2NiIsImZ1bGxOYW1lIjoiVGF1ZmlxIEFydCIsImVtYWlsIjoidGF1ZmlxYXJ0QGdtYWlsLmNvbSIsInJvbGUiOiJzaXN3YSIsImNyZWF0ZWRBdCI6MTY4NjY3MTU1NzkxNSwidXBkYXRlZEF0IjoxNjg2NjcxNTU3OTE1fSwiaWF0IjoxNjg2Njc2MDgzfQ.ma-4J8Dmj2vjWMIgEWlJdR-SDeu30Ln52Y13KV3Yx3k
+
+{
+    "judul":"masuk",
+    "deskripsi":"pending",
+    "userId":"648890c56cbdd47d12ff5566"
+}
+
